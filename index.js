@@ -35,6 +35,9 @@ function submitSize() {
     inputSize = parseInt(document.getElementById("input-size").value);
 
     console.log(inputSize); //to confirm it has been added to the array
+    for (let i = 0; i < inputSize * 1; i++) {
+        document.getElementById("showSelectedNames").innerHTML += `playerNameFromSrc`
+    }
 }
 
 // function submitNames() {
@@ -45,13 +48,12 @@ function submitSize() {
 //         image: playerImage
 //     })
 
-console.log("Players", Players)
 // document.getElementById("input-players").value = ""
 let allSelectedNames = [...document.querySelectorAll('span.selected')].map((el) => {
     return el.getAttribute('data-name')
 })
 
-alert(allSelectedNames)
+// alert(allSelectedNames)
 
 
 for (let i = 0; i < images.length; i++) {
@@ -61,10 +63,15 @@ for (let i = 0; i < images.length; i++) {
     playersImage.className = "player-image"
     playersImage.onclick = function (e) {
         playerNameFromSrc = e.target.src.split('/').pop().split('.').slice(0, -1).join('.');
+        Players.push(playerNameFromSrc)
         console.log("playerNameFromSrc", playerNameFromSrc)
+
     };
     document.getElementById("images-wrapper").append(playersImage);
+
+
 }
+
 
 
 
