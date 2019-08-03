@@ -1,3 +1,14 @@
 .selected {
     border: 2px solid red;
 }
+
+.player-image {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+
+.player-image-toggle {
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+}
