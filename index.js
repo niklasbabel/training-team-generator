@@ -35,8 +35,9 @@ function submitSize() {
     inputSize = parseInt(document.getElementById("input-size").value);
 
     console.log(inputSize); //to confirm it has been added to the array
-    for (let i = 0; i < inputSize * 1; i++) {
-        document.getElementById("showSelectedNames").innerHTML += `playerNameFromSrc`
+    for (let i = 0; i < Players * 1; i++) {
+        let playerName = Players[i]
+        document.getElementById("showSelectedNames").innerHTML += `<div class=teamGenerated> ${playerName} </div>`
     }
 }
 
@@ -65,7 +66,7 @@ for (let i = 0; i < images.length; i++) {
         playerNameFromSrc = e.target.src.split('/').pop().split('.').slice(0, -1).join('.');
         Players.push(playerNameFromSrc)
         console.log("playerNameFromSrc", playerNameFromSrc)
-
+        document.getElementById("showSelectedNames").innerHTML += `<div class=teamGenerated> ${playerNameFromSrc} </div>`
     };
     document.getElementById("images-wrapper").append(playersImage);
 
