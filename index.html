@@ -11,6 +11,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Random Team Generator</title>
+
 </head>
 
 <body>
@@ -40,9 +41,12 @@
             Start Team Generator
         </button>
     </div>
-    <div id="showSelectedNames">
+    <div class="container">
+        <div id="showSelectedNames" class="row text-center">
 
+        </div>
     </div>
+
     <!-- Modal 1 -->
     <div class="modal fade" id="question1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -72,7 +76,7 @@
     <!-- Modal 2 -->
     <div class="modal fade" id="question2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel2">Question 2/3</h5>
@@ -82,20 +86,24 @@
                 </div>
 
                 <div class="modal-body">
-                    <p>Please write the names of your players.</p>
-                    <form id="team-names">
-                        <input id="input-players" type="text" name="names">
-                    </form>
-                    <div class="modal-body" id="images-wrapper">
-                        <!-- <span class="selected" data-name="Anna">
-                            <img src="images/anna.png" class="PlayerImage" alt="Anna" height="120">
-                        </span>
-                        <span class="selected" data-name="Sebastian">
-                            <img src="images/sebastian.png" class="PlayerImage" alt="Sebastian" height="120">
-                        </span>
-                        <span data-name="Stefanie">
-                            <img src="images/stefanie.png" class="PlayerImage" alt="Stefanie" height="120">
-                        </span> -->
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-12" style="margin-bottom: 20px;">
+                                <h4>Available Members</h4>
+                                <div id="images-wrapper">
+
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+
+                                <h4>Selected Members</h4>
+                                <div id="images-wrapper-selected">
+
+                                </div>
+
+
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -107,7 +115,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

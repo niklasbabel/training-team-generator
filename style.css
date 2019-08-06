@@ -14,3 +14,35 @@
     background-color: #f2f2f2;
     color: white;
 }
+
+
+.player-image.selected {
+    border: none;
+}
+
+div.member.selected {
+    border: none;
+}
+
+.member {
+    display: inline-block;
+    text-align: center;
+}
+
+.member p {
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+
+#showSelectedNames {
+    margin-bottom: 100px;
+}
+
+#showSelectedNames>div {
+    padding-bottom: 55px;
+}
+
+.roleText {
+    margin: 0px;
+}
