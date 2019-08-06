@@ -177,7 +177,17 @@ document
     }
   });
 
-function clrPlayers() {
-  let elem = document.getElementById("showSelectedNames");
-  elem.remove();
+// function clrPlayers() {
+//   let elem = document.getElementById("showSelectedNames");
+//   elem.remove();
+// }
+
+// function clrPlayers() {
+//   document.getElementById("team-size").reset();
+//   document.getElementById("team-selection").reset();
+//   document.getElementById("team-choice").reset();
+// }
+
+function clrPlayers(elementID) {
+  document.getElementById(elementID).innerHTML = "";
 }
