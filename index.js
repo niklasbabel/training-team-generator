@@ -31,6 +31,23 @@ let playersImage;
 //   require.context("./images", false, /\.(png|jpe?g|svg)$/)
 // );
 
+// var inputKey = document.getElementById("input-size");
+// inputKey.addEventListener("keyup", function(event) {
+//   if (event.keyCode === 13) {
+//     event.preventDefault();
+//     document.getElementById("add").click();
+//   }
+// });
+
+var inputKey = document.getElementById("question1");
+console.log(inputKey);
+inputKey.addEventListener("keydown", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("add").click();
+  }
+});
+
 function submitSize() {
   inputSize = parseInt(document.getElementById("input-size").value);
 
@@ -42,6 +59,15 @@ function submitSize() {
     ).innerHTML += `<div class=teamGenerated> ${playerName} </div>`;
   }
 }
+
+var inputKey = document.getElementById("question2");
+console.log(inputKey);
+inputKey.addEventListener("keydown", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("addPlayers").click();
+  }
+});
 
 function submitNames() {
   let selectedSelectors = document
