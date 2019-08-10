@@ -43,7 +43,7 @@ let playersImage;
 
 var inputKey = document.getElementById("question1");
 console.log(inputKey);
-inputKey.addEventListener("keydown", function(event) {
+inputKey.addEventListener("keydown", function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     document.getElementById("add").click();
@@ -66,7 +66,7 @@ function submitSize() {
 
 var inputKey = document.getElementById("question2");
 console.log(inputKey);
-inputKey.addEventListener("keydown", function(event) {
+inputKey.addEventListener("keydown", function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     document.getElementById("addPlayers").click();
@@ -81,7 +81,7 @@ function submitNames() {
     .querySelectorAll(".member.selected");
 
   let selected = [];
-  selectedSelectors.forEach(function(node) {
+  selectedSelectors.forEach(function (node) {
     let image = node.querySelector("img").getAttribute("src");
     let name = node.querySelector("p").innerText;
 
@@ -121,7 +121,7 @@ function submitNames() {
       // returns a random integer from 1 to 9
       let role = "Employee";
       // let random = Math.floor(Math.random() * 8) + 1;
-      
+
       // console.log(random);
       // if (random > 0 && random <= 3) {
       //   role = "Observer";
@@ -132,12 +132,12 @@ function submitNames() {
       // }
 
       //First Person is always Observer
-      if(j==0){
+      if (j == 0) {
         role = "Observer"
       }
 
       //Second is always customer
-      else if(j==1){
+      else if (j == 1) {
         role = "Customer"
       }
 
@@ -173,7 +173,7 @@ for (let i = 0; i < images.length; i++) {
   div.className = "member available";
   let playersImage = document.createElement("img");
   playersImage.src = images[i];
-  //generating naem from image
+  //generating name from image
   let name = images[i]
     .split("/")
     .pop()
@@ -187,9 +187,9 @@ for (let i = 0; i < images.length; i++) {
   div.append(playersImage);
   div.append(p);
 
-  div.onclick = function(e) {
+  div.onclick = function (e) {
     if (div.className.indexOf("available") != -1) {
-       //If it is  unselected , select the person
+      //If it is  unselected , select the person
       div.className = div.className.replace("available", "selected");
       document.getElementById("images-wrapper").removeChild(div);
       document.getElementById("images-wrapper-selected").append(div);
@@ -207,7 +207,7 @@ for (let i = 0; i < images.length; i++) {
 let input = document.getElementById("input-size");
 document
   .getElementById("team-settings")
-  .addEventListener("submit", function(e) {
+  .addEventListener("submit", function (e) {
     e.preventDefault();
 
     let inputValue = document.getElementsByTagName("input")[0].value;
@@ -264,8 +264,8 @@ function clrPlayers() {
     p.textContent = name;
     div.append(playersImage);
     div.append(p);
-  
-    div.onclick = function(e) {
+
+    div.onclick = function (e) {
       if (div.className.indexOf("available") != -1) {
         div.className = div.className.replace("available", "selected");
         document.getElementById("images-wrapper").removeChild(div);
