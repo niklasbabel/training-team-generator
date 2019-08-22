@@ -15,7 +15,6 @@ let images = [
   "images/antonia.png",
   "images/julia.png",
   "images/franziska.png",
-  "images/esra.png",
   "images/niklas.png"
 ];
 
